@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="/images:icons/x-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="loginWindow">
+        <img src="/images:icons/hacker.png" alt="hacker" class="hacker">
+        <h1 id="loginPageTitle">USER LOGİN</h1>
+        <p id="wrong"></p>
+        <form>
+            <p class="login_p" id="username_label">Username</p>
+            <input type="text" placeholder="Enter your username." id="username" class="login_input" autocomplete="off">
+            <p class="login_p" id="password_label">Password</p>
+            <input type="password" placeholder="Enter your password." id="password" class="login_input">
+            <input class="login_input" type="button" value="Login" id="input_submit">
+            <a href="#" id="forget_password" class="login_a">Forgot Password?</a><br>
+            <a href="#" id="new_user" class="login_a">Create new user</a>
+        </form>
+    </div>
+    <div class="weather hide">
+        <div class="wrapper">
+            <header id="weather_title"><i class="bx bx-left-arrow-alt" id="backIcon"></i> Weather</header>
+            <section class="input_part">
+                <p class="info_txt"></p>
+                <input type="text" placeholder="City Name" id="city_name" spellcheck="false" required autocomplete="off">
+                <div class="seperator"></div>
+                <button id="location_btn">Your Location</button>
+            </section>
+            <section class="weather-part">
+                <img src="/images:icons/cloud.svg" alt="weather Icon">
+                <div class="temp">
+                    <span class="numb">13</span>
+                    <span class="deg">°C</span>
+                </div>
+                <div class="weather-details">Broken Clouds</div>
+                <div class="location">
+                    <i class="bx bx-map"></i>
+                    <span>Antalya, Turkey</span>
+                </div>
+                <div class="bottom-details">
+                    <div class="column feels">
+                        <i class="bx bxs-thermometer"></i>
+                        <div class="details">
+                            <div class="temp">
+                                <span class="numb-2">17</span>
+                                <span class="deg">°C</span>
+                            </div>
+                            <p>Feels like</p>
+                        </div>
+                    </div>
+                    <div class="column humidity">
+                        <i class="bx bxs-droplet-half"></i>
+                        <div class="details">
+                            <span class="numb">84%</span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
